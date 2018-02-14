@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BeansBeer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-primary p-3 text-white mb-3">
+        <h1>Beans Love Beers</h1>
+        <div class="btn btn-favor">
+            <i class="material-icons">favorite_border</i>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <div class="form-group">
+                            <div class="feedback"></div>
+                            <input type="text" class="form-control mb-1" id="search" placeholder="Searchfor Beer...">
+                            <button type="submit" class="btn btn-primary btn-block" id="btn-search">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="items-box">
+                   
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col ">
+                    <div class="btn btn-secondary btn-block" id="more">More</div>
+                </div>
+            </div>
+        </div>
+        <div class="favor-popup_wrap">
+            <div class="btn close-favor-btn">
+                <i class="material-icons">close</i>
+            </div>
+            <div class="favor-popup">
+            
+            </div>
+        </div>
+        
+    </section>
+
+
+<script src="build/app.bundle.js"></script>
+</body>
+</html>
