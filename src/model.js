@@ -62,12 +62,12 @@ class Model {
 
     addItems() {
         this.page++;
-        this.getPosts()
+        return this.getPosts()
     }
 
     searchItem(param) {
         this.param = param;
-        this.getPosts()
+        return this.getPosts()
     }
 
     addFavoriteItem(item) {

@@ -10,13 +10,15 @@ class Contr {
         const posts = this.model.getPosts();
         posts.then(res => this.ui.drawItems(res));
        
-        document.querySelector('#more').addEventListener('click',()=> this.model.addItems())
+        document.querySelector('#more').addEventListener('click', () =>{
+         this.model.addItems().then(res => this.ui.drawItems(res))
+        })
 
         document.querySelector('#btn-search').addEventListener('click', (e)=> {
             e.preventDefault();
 
             const inp = this.ui.getInp(document.querySelector('#btn-search'))
-            this.model.searchItem(inp)
+            this.model.searchItem(inp).then(res => this.ui.drawItems(res))
         });
 
         document.querySelector('.items-box').addEventListener('click', (e) => {
