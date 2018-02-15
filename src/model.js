@@ -1,7 +1,6 @@
 class Model {
 
-    constructor(ui) {
-        this.ui = ui
+    constructor() {
         this.url = 'https://api.punkapi.com/v2/'
         this.type = 'beers';
         this.param = '';
@@ -34,7 +33,7 @@ class Model {
             url = `${this.url}${this.type}?beer_name=${this.param}&page=${this.page}${this.perPage}`
         }
         console.log(url)
-        fetch(url)
+        return fetch(url)
             .then(responce => responce.json())
             .then(data => {
                 data.forEach(item => {
@@ -58,7 +57,6 @@ class Model {
 
 
             })
-            .then(arr => this.ui.drawItems(arr))
             .catch(err => console.log(err))
     }
 

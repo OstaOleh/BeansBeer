@@ -8,8 +8,8 @@ class Contr {
 
     init() {
         const posts = this.model.getPosts();
-        // console.log(posts)
-        // this.ui.drawItems(posts)
+        posts.then(res => this.ui.drawItems(res));
+       
         document.querySelector('#more').addEventListener('click',()=> this.model.addItems())
 
         document.querySelector('#btn-search').addEventListener('click', (e)=> {
